@@ -12,6 +12,7 @@ public class Print {
 		
 		}
 		static void printtrading() {
+			//The printing format of the Header
 			System.out.println( "tradeNo\t" + "currencyPair\t "+ "customerName\t" + " amount\t    " + " rate\t");
 			if(bh.isEmpty()) 
 			{

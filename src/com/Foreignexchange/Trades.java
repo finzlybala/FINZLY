@@ -14,28 +14,32 @@ public class Trades {
 		System.out.println("Enter the CustomerName ");
 		String customerName = s.nextLine();
 		if (customerName.matches("^[a-zA-Z\\s]*$")) {
-		System.out.println("Enter the CurrencyPair");
+		System.out.println("Enter the CurrencyPair \n Only USD to INR is Accepted");//*CurrencyPair of USD to INR is Accepted  *
+		
 		String currencyPair = s.next();
 		String pair = "USDINR";
 
-		if (pair.equals(currencyPair)) {
+		if (pair.equalsIgnoreCase(currencyPair)) {
 			
 			System.out.println("Enter the Amount to Transfer");
 			double amount = s.nextDouble();
 			System.out.println("Do u want to get Rate (YES/NO)");
 			String rates = s.next();
-			String y = "yes";
+			
 			final double rateOfUSD = 66.00;
 			double INR = rateOfUSD * amount;
-			if (y.equalsIgnoreCase(rates)) {
+			if ("yes".equalsIgnoreCase(rates)) {
 				System.out.println("You are transferring INR  " + INR + " to " + customerName + "\n");
-			} else {
+			} else if("no".equalsIgnoreCase(rates)){
 				System.out.println("Warning : Are you sure to continue without knowing the rate...!");
 				String warning = s.next();
 				String Statement = (warning.equalsIgnoreCase("no"))? "You are transferring INR   " + INR + " to " + customerName: "";
 				System.out.println(Statement);}
+			else {
+				System.out.println("Enter valid Option...\n");
+				Operations.operationlist();}
 
-			System.out.println("Book/Cancel this Trade?");
+			System.out.println("BOOK - To Book the Trade \n Warrnig :Other inputs will cancel the Trade");
 			String bookOrcancel = s.next();
 			if(bookOrcancel.equalsIgnoreCase("Book")) 
 			{
