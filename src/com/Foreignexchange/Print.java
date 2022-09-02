@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Print {
 	
-	
+		// Storing the booked trade data in arraylist and method for printing it
 		static ArrayList <Variables> bh=new ArrayList<>();
 		static void addtrading(int tradeNo, String currencyPair, String customerName, double amount, double rate) 
 		{

@@ -1,5 +1,5 @@
 package com.Foreignexchange;
-
+// pojo class for collecting the information
 public class Variables {
 private int tradeNo;
 private String currencyPair="";

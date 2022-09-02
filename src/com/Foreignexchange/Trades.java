@@ -8,6 +8,7 @@ public class Trades {
 	}
 
 	@SuppressWarnings("resource")
+	// Booking the trade
 	public static void booktrading() {
 		Scanner s = new Scanner(System.in);
 		System.out.println("Enter the CustomerName ");
@@ -52,6 +53,7 @@ public class Trades {
 	}
 
 	@SuppressWarnings("resource")
+	// Exiting from the code
 	public static void exit() {
 		Scanner s = new Scanner(System.in);
 		System.out.println("Do you really want to exit (y/n)");
